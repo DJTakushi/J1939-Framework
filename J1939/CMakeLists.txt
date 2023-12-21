@@ -40,8 +40,8 @@ target_link_libraries(J1939
         Common jsoncpp
 )
 
-install (TARGETS J1939 EXPORT J1939FrameworkTargets
-    DESTINATION lib)
+
+install (TARGETS J1939 EXPORT J1939FrameworkTargets DESTINATION lib)
 
 
 install(DIRECTORY include/ 
