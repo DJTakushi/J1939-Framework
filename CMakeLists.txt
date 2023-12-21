@@ -11,6 +11,7 @@ set(CMAKE_MODULE_PATH "./cmake/;${CMAKE_MODULE_PATH}")
 
 find_package (Threads REQUIRED)
 find_package (jsoncpp REQUIRED)
+option(UNITTEST "Build & run unit-tests" ON)
 
 
 set (CMAKE_CXX_STANDARD 11)
@@ -24,8 +25,9 @@ add_subdirectory(J1939)
 add_subdirectory(Database)
 # add_subdirectory(BinUtils) #build fails and is unnecessary
 add_subdirectory(j1939AddressClaimer)
-add_subdirectory(Tests)
-
+if(${UNITTEST})
+  add_subdirectory(Tests)
+endif()
 find_package (LibWebSockets)
 find_package(Protobuf)
 
