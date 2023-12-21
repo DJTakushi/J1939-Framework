@@ -41,7 +41,7 @@ target_link_libraries(J1939
 )
 
 install (TARGETS J1939 EXPORT J1939FrameworkTargets
-    LIBRARY DESTINATION lib)
+    DESTINATION lib)
 
 
 install(DIRECTORY include/ 
